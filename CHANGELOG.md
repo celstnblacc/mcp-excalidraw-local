@@ -174,3 +174,5 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - `fs.writeFileSync`/`readFileSync` calls in export/import tool handlers converted to `fs.promises` async variants
 
 ### Total tests: 528 (31 files)
+
+- 2026-06-25: chore: remove personal workspace path from tracked files
