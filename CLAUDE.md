@@ -139,4 +139,4 @@ When exploring or understanding code in supported languages (JS, TS, Python, Go,
 
 ## Strict Installation Decoupling
 
-Once installed (e.g., to ~/.local/bin), the project binary must NEVER depend on the local repository path (~/DevOpsSec) for execution, configuration, or data. All paths must be relative to the installation root or use standard system config paths (~/.config).
+Once installed (e.g., to ~/.local/bin), the project binary must NEVER depend on the local repository path for execution, configuration, or data. All paths must be relative to the installation root or use standard system config paths (~/.config).
