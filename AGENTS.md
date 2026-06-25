@@ -126,3 +126,7 @@ npm run scan:similar-projects -- \
 - [ ] `npm run build` → zero errors
 - [ ] `shipguard scan .` → 0 CRITICAL
 - [ ] `npm publish --dry-run` → only `dist/`, `skills/`, `README.md`, `LICENSE` included
+
+## Strict Installation Decoupling
+
+Once installed (e.g., to ~/.local/bin), the project binary must NEVER depend on the local repository path for execution, configuration, or data. All paths must be relative to the installation root or use standard system config paths (~/.config).
