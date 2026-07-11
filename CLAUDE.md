@@ -108,16 +108,16 @@ Two Dockerfiles: `Dockerfile` (MCP server only), `Dockerfile.canvas` (canvas wit
 
 ## Publish Readiness
 
-**Last hardened:** 2026-03-29 — gauntlet all-green, PR #1 merged.
+**Last hardened:** 2026-07-11 — org rename (celstnblacc → artificemachine), v1.2.1.
 
-### Security posture (as of 1.6.3)
+### Security posture
 - `src/security.ts`: helmet, CORS allowlist, timing-safe API key auth, prototype pollution guard, 3-tier rate limiting, WS challenge-response auth, Mermaid input size cap
-- 519/519 tests passing; regression tests cover previously crash-able sync paths
+- 528/528 tests passing; regression tests cover previously crash-able sync paths
 - Docker: non-root user, resource limits, hardened `.dockerignore`
 
 ### Before running `npm publish`
-- [ ] Bump `version` in `package.json` to match `CHANGELOG.md` entry (currently `1.2.0`)
-- [ ] Run `npm test` — must be 519/519
+- [ ] Bump `version` in `package.json` to match `CHANGELOG.md` entry (currently `1.2.1`)
+- [ ] Run `npm test` — must be 528/528
 - [ ] Run `npm run build` — must be zero TS errors
 - [ ] Run `shipguard scan .` — must be 0 CRITICAL findings
 - [ ] Verify `CHANGELOG.md` has an entry for the version being published
