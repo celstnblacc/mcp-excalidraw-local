@@ -170,7 +170,7 @@ Open `http://localhost:3000` in your browser.
 
 Canvas server:
 ```bash
-docker run -d -p 3000:3000 --name mcp-excalidraw-canvas artificemachine/excalidraw-mcp-sentinel-canvas:latest
+docker run -d -p 3000:3000 --name mcp-excalidraw-canvas newblacc/excalidraw-mcp-sentinel-canvas:latest
 ```
 
 MCP server (stdio) is typically launched by your MCP client:
@@ -182,7 +182,7 @@ MCP server (stdio) is typically launched by your MCP client:
       "args": [
         "run", "-i", "--rm",
         "-e", "CANVAS_PORT=3000",
-        "artificemachine/excalidraw-mcp-sentinel:latest"
+        "newblacc/excalidraw-mcp-sentinel:latest"
       ]
     }
   }
@@ -384,8 +384,8 @@ npm run build
 #### Docker users
 
 ```bash
-docker pull artificemachine/excalidraw-mcp-sentinel:latest
-docker pull artificemachine/excalidraw-mcp-sentinel-canvas:latest
+docker pull newblacc/excalidraw-mcp-sentinel:latest
+docker pull newblacc/excalidraw-mcp-sentinel-canvas:latest
 ```
 
 Then recreate your containers (`docker compose up -d` or `docker run` again).
