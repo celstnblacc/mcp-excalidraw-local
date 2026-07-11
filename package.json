@@ -86,8 +86,8 @@
     "local"
   ],
   "author": {
-    "name": "celstnblacc",
-    "url": "https://github.com/celstnblacc"
+    "name": "artificemachine",
+    "url": "https://github.com/artificemachine"
   },
   "contributors": [
     {
@@ -103,11 +103,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/celstnblacc/excalidraw-mcp-sentinel.git"
+    "url": "https://github.com/artificemachine/excalidraw-mcp-sentinel.git"
   },
-  "homepage": "https://github.com/celstnblacc/excalidraw-mcp-sentinel#readme",
+  "homepage": "https://github.com/artificemachine/excalidraw-mcp-sentinel#readme",
   "bugs": {
-    "url": "https://github.com/celstnblacc/excalidraw-mcp-sentinel/issues"
+    "url": "https://github.com/artificemachine/excalidraw-mcp-sentinel/issues"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

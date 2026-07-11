@@ -23,7 +23,7 @@ const SEED_REPOS = [
   "excalidraw/excalidraw",
   "yctimlin/mcp_excalidraw",
   "sanjibdevnathlabs/mcp-excalidraw-local",
-  "celstnblacc/excalidraw-mcp-sentinel",
+  "artificemachine/excalidraw-mcp-sentinel",
   "i-tozer/excalidraw-mcp",
   "alswl/excalidraw-collaboration",
 ];

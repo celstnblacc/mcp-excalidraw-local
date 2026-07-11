@@ -177,3 +177,4 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - 2026-06-25: chore: remove personal workspace path from tracked files
 - 2026-06-25: chore: remove personal workspace path from tracked files
+- 2026-07-11: fix: repo org moved from `celstnblacc` to `artificemachine` — updated all package.json, Dockerfile, README, workflow, and skill refs to `artificemachine/excalidraw-mcp-sentinel` (correction to stale 1.0.0 entry above, which named the old org)

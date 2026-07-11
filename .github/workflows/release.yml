@@ -250,8 +250,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            celstnblacc/excalidraw-mcp-sentinel:latest
-            celstnblacc/excalidraw-mcp-sentinel:v${{ needs.release.outputs.version }}
+            artificemachine/excalidraw-mcp-sentinel:latest
+            artificemachine/excalidraw-mcp-sentinel:v${{ needs.release.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
@@ -263,8 +263,8 @@ jobs:
           file: ./Dockerfile.canvas
           push: true
           tags: |
-            celstnblacc/excalidraw-mcp-sentinel-canvas:latest
-            celstnblacc/excalidraw-mcp-sentinel-canvas:v${{ needs.release.outputs.version }}
+            artificemachine/excalidraw-mcp-sentinel-canvas:latest
+            artificemachine/excalidraw-mcp-sentinel-canvas:v${{ needs.release.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
