@@ -1,7 +1,7 @@
 # Excalidraw MCP Sentinel
 
-[![CI](https://github.com/celstnblacc/excalidraw-mcp-sentinel/actions/workflows/ci.yml/badge.svg)](https://github.com/celstnblacc/excalidraw-mcp-sentinel/actions/workflows/ci.yml)
-[![Release & Publish](https://github.com/celstnblacc/excalidraw-mcp-sentinel/actions/workflows/release.yml/badge.svg)](https://github.com/celstnblacc/excalidraw-mcp-sentinel/actions/workflows/release.yml)
+[![CI](https://github.com/artificemachine/excalidraw-mcp-sentinel/actions/workflows/ci.yml/badge.svg)](https://github.com/artificemachine/excalidraw-mcp-sentinel/actions/workflows/ci.yml)
+[![Release & Publish](https://github.com/artificemachine/excalidraw-mcp-sentinel/actions/workflows/release.yml/badge.svg)](https://github.com/artificemachine/excalidraw-mcp-sentinel/actions/workflows/release.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A **hardened**, fully local, self-hosted Excalidraw MCP server with **SQLite persistence**, **multi-tenancy**, **auto-sync**, and **production-grade security** — designed to run entirely on your machine without depending on `excalidraw.com`.
@@ -18,7 +18,7 @@ Run a live Excalidraw canvas and control it from any AI agent. This repo provide
 
 ## Why this fork?
 
-Forked from [celstnblacc/excalidraw-mcp-sentinel](https://github.com/celstnblacc/excalidraw-mcp-sentinel) (itself a fork of [yctimlin/mcp_excalidraw](https://github.com/yctimlin/mcp_excalidraw)) with production hardening:
+Forked from [artificemachine/excalidraw-mcp-sentinel](https://github.com/artificemachine/excalidraw-mcp-sentinel) (itself a fork of [yctimlin/mcp_excalidraw](https://github.com/yctimlin/mcp_excalidraw)) with production hardening:
 
 - **446 tests** (upstream has none) — unit, API, WebSocket, and regression
 - **Security middleware** (`src/security.ts`): helmet, CORS allowlist, timing-safe API key auth, prototype pollution guard, input sanitization
@@ -150,7 +150,7 @@ $ npx excalidraw-mcp-sentinel setup
 ### Path B: From Source
 
 ```bash
-git clone https://github.com/celstnblacc/excalidraw-mcp-sentinel.git
+git clone https://github.com/artificemachine/excalidraw-mcp-sentinel.git
 cd excalidraw-mcp-sentinel
 
 npm install
@@ -170,7 +170,7 @@ Open `http://localhost:3000` in your browser.
 
 Canvas server:
 ```bash
-docker run -d -p 3000:3000 --name mcp-excalidraw-canvas celstnblacc/excalidraw-mcp-sentinel-canvas:latest
+docker run -d -p 3000:3000 --name mcp-excalidraw-canvas artificemachine/excalidraw-mcp-sentinel-canvas:latest
 ```
 
 MCP server (stdio) is typically launched by your MCP client:
@@ -182,7 +182,7 @@ MCP server (stdio) is typically launched by your MCP client:
       "args": [
         "run", "-i", "--rm",
         "-e", "CANVAS_PORT=3000",
-        "celstnblacc/excalidraw-mcp-sentinel:latest"
+        "artificemachine/excalidraw-mcp-sentinel:latest"
       ]
     }
   }
@@ -384,8 +384,8 @@ npm run build
 #### Docker users
 
 ```bash
-docker pull celstnblacc/excalidraw-mcp-sentinel:latest
-docker pull celstnblacc/excalidraw-mcp-sentinel-canvas:latest
+docker pull artificemachine/excalidraw-mcp-sentinel:latest
+docker pull artificemachine/excalidraw-mcp-sentinel-canvas:latest
 ```
 
 Then recreate your containers (`docker compose up -d` or `docker run` again).
@@ -706,7 +706,7 @@ Broader competitor scan excluding this repo's direct lineage:
 npm run scan:similar-projects -- \
   --exclude-repo yctimlin/mcp_excalidraw \
   --exclude-repo sanjibdevnathlabs/mcp-excalidraw-local \
-  --exclude-repo celstnblacc/excalidraw-mcp-sentinel
+  --exclude-repo artificemachine/excalidraw-mcp-sentinel
 ```
 
 Outputs are written to `docs/generated/` as both JSON and Markdown reports. For higher GitHub API limits, set `GITHUB_TOKEN` before running the scan.

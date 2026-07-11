@@ -102,7 +102,7 @@ All middleware lives here — do not duplicate in routes:
 npm run scan:similar-projects -- \
   --exclude-repo yctimlin/mcp_excalidraw \
   --exclude-repo sanjibdevnathlabs/mcp-excalidraw-local \
-  --exclude-repo celstnblacc/excalidraw-mcp-sentinel
+  --exclude-repo artificemachine/excalidraw-mcp-sentinel
 ```
 
 - Reports are written to `docs/generated/` as JSON and Markdown.
