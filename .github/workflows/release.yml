@@ -123,22 +123,15 @@ jobs:
     outputs:
       version: ${{ needs.check.outputs.new_version }}
     steps:
-      - name: Generate release bot token
-        id: app-token
-        uses: actions/create-github-app-token@c1a285145b9d317df6ced56c550f5b5e3e8cd3f9 # v1.11.6
-        with:
-          app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
-
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
-          token: ${{ steps.app-token.outputs.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure git
         run: |
-          git config user.name "excalidraw-sentinel-release-bot[bot]"
-          git config user.email "${{ secrets.APP_ID }}+excalidraw-sentinel-release-bot[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Bump version in package.json
         run: |
@@ -153,9 +146,9 @@ jobs:
           git push origin "v${{ needs.check.outputs.new_version }}"
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@da05d552573ad5aba36ea0be2ddfef1a7e5c4d12 # v2.2.2
+        uses: softprops/action-gh-release@718ea10b132b3b2eba29c1007bb80653f286566b # v3.0.1
         with:
-          token: ${{ steps.app-token.outputs.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: v${{ needs.check.outputs.new_version }}
           name: v${{ needs.check.outputs.new_version }}
           generate_release_notes: true
