@@ -5,6 +5,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
+- 2026-07-21: docs: align CODE_OF_CONDUCT.md with concise 5-line CoC (replaces Contributor Covenant boilerplate with internal style)
 ## [1.1.0] - 2026-04-06
 
 ### Added
